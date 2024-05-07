@@ -11,8 +11,22 @@ Class {
 }
 
 { #category : #accessing }
+UUID7Generator >> clock [
+	^ Time primUTCMillisecondsClock
+]
+
+{ #category : #accessing }
 UUID7Generator >> next [
 	<gtExample>
 	
-	^ UUID new
+	| uuid random |
+	uuid := UUID nilUUID.
+	(self clock asByteArrayOfSize: 6) doWithIndex: [ :byte :index |
+		uuid at: index put: byte ].
+	random := UUIDGenerator default randomGenerator.
+	7 to: 16 do: [ :index |
+		uuid at: index put: (random nextInteger: 256) - 1 ].
+	uuid at: 7 put: (((uuid at: 7) bitAnd: 16r0F) bitOr: 16r70).
+	uuid at: 9 put: (((uuid at: 9) bitAnd: 16r3F) bitOr: 16r80).
+	^ uuid
 ]
