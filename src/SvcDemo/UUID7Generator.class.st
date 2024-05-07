@@ -18,7 +18,7 @@ UUID7Generator >> clock [
 { #category : #accessing }
 UUID7Generator >> next [
 	<gtExample>
-	
+
 	| uuid random |
 	uuid := UUID nilUUID.
 	(self clock asByteArrayOfSize: 6) doWithIndex: [ :byte :index |
