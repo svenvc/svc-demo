@@ -12,7 +12,7 @@ Class {
 
 { #category : #private }
 UUID7Generator >> clock [
-	^ Time primUTCMillisecondsClock
+	^ Time primUTCMillisecondsClock - 2177452800000
 ]
 
 { #category : #accessing }
@@ -28,8 +28,10 @@ UUID7Generator >> next [
 
 { #category : #private }
 UUID7Generator >> putClockOn: uuid [
-	(self clock asByteArrayOfSize: 6)
-		doWithIndex: [ :byte :index | uuid at: index put: byte ]
+	| now |
+	now := self clock.
+	1 to: 6 do: [ :index | 
+		uuid at: index put: (now byteAt: 7 - index) ]
 ]
 
 { #category : #private }
