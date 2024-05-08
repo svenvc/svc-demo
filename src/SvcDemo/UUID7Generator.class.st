@@ -7,12 +7,22 @@ I am UUID7Generator.
 Class {
 	#name : #UUID7Generator,
 	#superclass : #Object,
+	#instVars : [
+		'clockEpochDelta'
+	],
 	#category : #SvcDemo
 }
 
 { #category : #private }
 UUID7Generator >> clock [
-	^ Time primUTCMillisecondsClock - 2177452800000
+	^ Time primUTCMillisecondsClock - self clockEpochDelta
+]
+
+{ #category : #private }
+UUID7Generator >> clockEpochDelta [
+	^ clockEpochDelta
+		ifNil: [ 
+			clockEpochDelta := (ZTimestamp unixEpoch - ZTimestamp clockEpoch) asSeconds * 1e3 ]
 ]
 
 { #category : #accessing }
@@ -46,8 +56,16 @@ UUID7Generator >> randomGenerator [
 	^ UUIDGenerator default randomGenerator
 ]
 
-{ #category : #accessing }
+{ #category : #private }
 UUID7Generator >> setVersionAndVariant: uuid [
 	uuid at: 7 put: (((uuid at: 7) bitAnd: 16r0F) bitOr: 16r70).
 	uuid at: 9 put: (((uuid at: 9) bitAnd: 16r3F) bitOr: 16r80)
+]
+
+{ #category : #accessing }
+UUID7Generator >> timestampFrom: aUUID [
+	| unixTimestampMilliceonds |
+	unixTimestampMilliceonds := ((aUUID as: ByteArray) copyFrom: 1 to: 6) asInteger.
+	^ ZTimestamp
+		fromClockNanoseconds: (unixTimestampMilliceonds + self clockEpochDelta) * 1e6
 ]
