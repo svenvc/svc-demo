@@ -53,6 +53,8 @@ UUID7Generator >> putRandomOn: uuid [
 
 { #category : #private }
 UUID7Generator >> randomGenerator [
+	"Use the shared generator"
+	
 	^ UUIDGenerator default randomGenerator
 ]
 
