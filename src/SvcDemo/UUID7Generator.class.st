@@ -15,6 +15,8 @@ Class {
 
 { #category : #private }
 UUID7Generator >> clock [
+	"Return Unix time in milliseconds"
+	
 	^ Time primUTCMillisecondsClock - self clockEpochDelta
 ]
 
