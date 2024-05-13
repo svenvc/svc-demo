@@ -72,6 +72,8 @@ UUID7Generator >> setVersionAndVariant: uuid [
 
 { #category : #accessing }
 UUID7Generator >> timestampFrom: aUUID [
+	"Assuming aUUID is of version 7, extract the timestamp"
+
 	| unixTimestampMilliceonds |
 	unixTimestampMilliceonds := ((aUUID as: ByteArray) copyFrom: 1 to: 6) asInteger.
 	^ ZTimestamp
