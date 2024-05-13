@@ -22,6 +22,8 @@ UUID7Generator >> clock [
 
 { #category : #private }
 UUID7Generator >> clockEpochDelta [
+	"Return the delta in milliseconds between the Unix epoch and our clock epoch"
+
 	^ clockEpochDelta
 		ifNil: [ 
 			clockEpochDelta := (ZTimestamp unixEpoch - ZTimestamp clockEpoch) asSeconds * 1e3 ]
