@@ -29,6 +29,8 @@ UUID7Generator >> clockEpochDelta [
 
 { #category : #accessing }
 UUID7Generator >> next [
+	"Return the next UUID"
+	
 	<gtExample>
 	| uuid |
 	uuid := UUID nilUUID.
