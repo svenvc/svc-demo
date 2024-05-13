@@ -29,6 +29,18 @@ UUID7Generator >> clockEpochDelta [
 			clockEpochDelta := (ZTimestamp unixEpoch - ZTimestamp clockEpoch) asSeconds * 1e3 ]
 ]
 
+{ #category : #example }
+UUID7Generator >> exampleTimestamp [
+	<gtExample>
+	| uuid timestamp |
+	uuid := self next.
+	self assert: uuid isNil not.
+	self assert: uuid size = 16.
+	timestamp := self timestampFrom: uuid.
+	self assert: (timestamp between: ZTimestamp now - 1 minute and: ZTimestamp now + 1 minute).
+	^ timestamp
+]
+
 { #category : #accessing }
 UUID7Generator >> next [
 	"Return the next UUID"
