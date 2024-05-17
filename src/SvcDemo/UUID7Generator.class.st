@@ -48,6 +48,16 @@ UUID7Generator >> exampleTimestamp [
 	^ timestamp
 ]
 
+{ #category : #example }
+UUID7Generator >> exampleUUID [
+	<gtExample>
+	| uuid |
+	uuid := self next.
+	self assert: uuid isNil not.
+	self assert: uuid size = 16.
+	^ uuid
+]
+
 { #category : #accessing }
 UUID7Generator >> next [
 	"Return the next UUID"
