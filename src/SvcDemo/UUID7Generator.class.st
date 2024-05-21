@@ -1,5 +1,7 @@
 "
 I am UUID7Generator.
+I generate UUIDs (universally unique identifiers) of type/version 7.
+
 Usage
 
 ```
