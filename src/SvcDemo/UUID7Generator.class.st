@@ -1,6 +1,8 @@
 "
 I am UUID7Generator.
 I generate UUIDs (universally unique identifiers) of type/version 7.
+My UUIDS start with a 48 bit big-endian Unix Epoch timestamp with approximately millisecond granularity.
+As such they are sortable (unless they are generated too fast).
 
 Usage
 
