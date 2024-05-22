@@ -100,6 +100,7 @@ UUID7Generator >> randomGenerator [
 UUID7Generator >> setVersionAndVariant: uuid [
 	"top nibble version 0111 or 7"
 	uuid at: 7 put: (((uuid at: 7) bitAnd: 16r0F) bitOr: 16r70).
+	"top two bits variant 10"
 	uuid at: 9 put: (((uuid at: 9) bitAnd: 16r3F) bitOr: 16r80)
 ]
 
