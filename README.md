@@ -12,3 +12,5 @@ Metacello new
 ```
 
 This is work in progress.
+
+MIT License.
