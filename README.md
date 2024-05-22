@@ -1,5 +1,7 @@
 # svc-demo
-A demo repository for experiments in code management
+
+A demo repository for experiments in code management (i.e. this repository is used to test a git tool).
+
 ## Installation
 
 ```st
