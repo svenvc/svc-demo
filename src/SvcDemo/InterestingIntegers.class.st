@@ -17,6 +17,12 @@ InterestingIntegers >> one [
 { #category : #accessing }
 InterestingIntegers >> zero [
 	<gtExample>
-	
-	^ 0
+
+	| zero |
+
+	zero := 0.
+
+	self assert: zero isZero.
+
+	^ zero
 ]
