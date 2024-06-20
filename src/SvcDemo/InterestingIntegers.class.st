@@ -8,6 +8,13 @@ Class {
 }
 
 { #category : #accessing }
+InterestingIntegers >> one [
+	<gtExample>
+	
+	^ 1
+]
+
+{ #category : #accessing }
 InterestingIntegers >> zero [
 	<gtExample>
 	
