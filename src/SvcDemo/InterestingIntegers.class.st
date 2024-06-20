@@ -10,8 +10,14 @@ Class {
 { #category : #accessing }
 InterestingIntegers >> one [
 	<gtExample>
-	
-	^ 1
+
+	| one |
+
+	one := 1.
+
+	self assert: one + self zero = one.
+
+	^ one
 ]
 
 { #category : #accessing }
