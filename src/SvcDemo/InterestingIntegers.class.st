@@ -30,8 +30,8 @@ InterestingIntegers >> zero [
 	zero := 0.
 
 	self assert: zero isZero.
-
 	self assert: zero + zero = zero.
+	self assert: zero - zero = zero.
 
 	^ zero
 ]
