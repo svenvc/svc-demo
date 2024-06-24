@@ -16,6 +16,7 @@ InterestingIntegers >> one [
 	one := 1.
 
 	self assert: one + self zero = one.
+	self assert: one - self zero = one.
 
 	^ one
 ]
