@@ -14,6 +14,11 @@ Metacello new
 	load
 ```
 
+#Content
+
 This is work in progress.
+
+There are 2 classes included: UUID7Generator and InterestingIntegers.
+
 
 MIT License.
