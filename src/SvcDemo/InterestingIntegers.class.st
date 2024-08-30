@@ -17,8 +17,24 @@ InterestingIntegers >> one [
 
 	self assert: one + self zero = one.
 	self assert: one - self zero = one.
+	self assert: one odd.
 
 	^ one
+]
+
+{ #category : #accessing }
+InterestingIntegers >> two [
+	<gtExample>
+	
+	| two |
+	
+	two := 2.
+	
+	self assert: two = (self one + self one).
+	self assert: two even.
+	self assert: two isPrime.
+	
+	^ two
 ]
 
 { #category : #accessing }
