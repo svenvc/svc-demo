@@ -23,6 +23,20 @@ InterestingIntegers >> one [
 ]
 
 { #category : #accessing }
+InterestingIntegers >> seven [
+	<gtExample>
+
+	| seven |
+
+	seven := 7.
+
+	self assert: seven odd.
+	self assert: seven isPrime.
+
+	^ seven
+]
+
+{ #category : #accessing }
 InterestingIntegers >> two [
 	<gtExample>
 	
