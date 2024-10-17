@@ -7,6 +7,15 @@ Class {
 	#category : #SvcDemo
 }
 
+{ #category : #private }
+InterestingIntegers >> dummy [
+	<gtExample>
+
+	"time tag = 2024-10-17T09:54:42.692216Z"
+
+	^ ZTimestamp now
+]
+
 { #category : #accessing }
 InterestingIntegers >> one [
 	<gtExample>
