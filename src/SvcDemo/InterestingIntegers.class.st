@@ -41,6 +41,7 @@ InterestingIntegers >> seven [
 
 	self assert: seven odd.
 	self assert: seven isPrime.
+	self assert: seven equals: self two * self two + self one + self two.
 
 	^ seven
 ]
