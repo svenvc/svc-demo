@@ -23,3 +23,5 @@ There are 2 classes included:
 - InterestingIntegers.
 
 MIT License.
+
+les élèves français possèdent 10 €
