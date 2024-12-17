@@ -22,6 +22,9 @@ There are 2 classes included:
 - UUID7Generator
 - InterestingIntegers.
 
-MIT License.
 
 les élèves français possèdent 10 €
+
+## License
+
+MIT License.
