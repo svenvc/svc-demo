@@ -47,6 +47,21 @@ InterestingIntegers >> seven [
 ]
 
 { #category : #accessing }
+InterestingIntegers >> three [
+	<gtExample>
+	
+	| three |
+	
+	three := 3.
+	
+	self assert: three = (self two + self one).
+	self assert: three odd.
+	self assert: three isPrime.
+	
+	^ three
+]
+
+{ #category : #accessing }
 InterestingIntegers >> two [
 	<gtExample>
 	
