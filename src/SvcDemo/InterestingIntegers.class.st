@@ -54,7 +54,8 @@ InterestingIntegers >> three [
 	
 	three := 3.
 	
-	self assert: three = (self two + self one).
+	self assert: three equals: self two + self one.
+	self assert: three equals: self one + self one + self one.
 	self assert: three odd.
 	self assert: three isPrime.
 	
