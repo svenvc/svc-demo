@@ -69,7 +69,7 @@ InterestingIntegers >> two [
 	
 	two := 2.
 	
-	self assert: two = (self one + self one).
+	self assert: two equals: self one + self one.
 	self assert: two even.
 	self assert: two isPrime.
 	
